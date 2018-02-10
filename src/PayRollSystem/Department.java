@@ -78,6 +78,13 @@ ArrayList<Employee> listOfEmployees = new ArrayList<Employee>();
                                            "", "Department Name:", departmentName,
                                            "", "Department Manager:", departmentManager,
                                            "", "List Of Employees:", listOfEmployees);
+         if(listOfEmployees == null || listOfEmployees.isEmpty())
+            output += "No employees received";
+        else
+        {
+            for(Employee checkElement: listOfEmployees)
+                output += checkElement.toString();
+        }
        return output + "\n"; 
        // return "DepartmentID: " + departmentID + ", Department Name: " + departmentName + ", Department Manager: " + departmentManager + ", List Of Employees: " + listOfEmployees;
     }
